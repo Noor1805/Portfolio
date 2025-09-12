@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap');
+
+/*
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />*/
+
+@font-face {
+  font-family: 'Zumma Rough Bold';
+  src: url('/assets/Fontspring-DEMO-zuumerough-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+/* League Gothic Font */
+@font-face {
+  font-family: 'League Gothic';
+  src: url('/assets/LeagueGothic-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+.league-font {
+  font-family: 'League Gothic', sans-serif;
+}
+
+
+
+/* Michroma Font */
+@font-face {
+  font-family: 'Michroma';
+  src: url('/assets/Michroma-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #000;
+}
+.Zumma {
+  font-family: 'Zumma Rough Bold', sans-serif;
+}
+
+
+.michroma-font {
+  font-family: 'Michroma', sans-serif;
+}
