@@ -5,6 +5,7 @@ const AboutMe = () => {
   return (
     <div id="about" className="relative min-h-screen bg-black text-black flex items-center justify-center p-4 overflow-hidden">
      {/* Background full-page text */}
+      
       <div className="absolute top-96 inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>

@@ -6,9 +6,9 @@ const Experience = () => {
       id="experience"
       className="relative w-full mt-5 bg-black text-[#cbbaad] flex flex-col lg:flex-row min-h-screen overflow-hidden"
     >
-      {/* Background full-page text */}
+     {/* Background full-page text */}
       <div className="absolute inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
-        {"KASHAF NOOR ".repeat(50)}
+        {"KASHAF NOOR ".repeat(5)}
       </div>
 
       {/* Left Section */}
