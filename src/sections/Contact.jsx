@@ -32,8 +32,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative min-h-screen bg-black text-[#cbbaad] flex flex-col items-center justify-center px-6 overflow-hidden">
-      {/* Background full-page text */}
+    <div id="contact" className="relative min-h-screen bg-black text-[#cbbaad] flex flex-col items-center justify-center px-6 overflow-hidden">
+      
       <div className="absolute inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>

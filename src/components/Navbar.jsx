@@ -8,23 +8,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed orbitron-font font-bold top-0 left-0 w-full bg-black text-white p-4 flex items-center justify-between z-10">
+    <nav className="fixed orbitron-font Zumma tracking-wider font-bold top-0 left-0 w-full bg-black text-white p-4 flex items-center justify-between z-50">
       {/* Left - Logo */}
       <div className="flex items-center">
-        <h1 className="text-xl font-bold">Kashaf</h1>
+        <h1 className="text-2xl Zumma font-bold">KASHAF</h1>
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex space-x-20">
+      <div className="hidden text-xl md:flex space-x-20">
         <a href="#about" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
           About
+        </a>
+         <a href="#experience" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
+          Experience
+        </a>
+         <a href="#skills" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
+          Skills
         </a>
         <a href="#projects" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
           Projects
         </a>
-        <a href="#skills" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
-          Skills
-        </a>
+       
       </div>
 
       {/* Right - Contact or Burger */}
@@ -75,39 +79,39 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute  top-full left-0 w-full bg-black flex flex-col items-center md:hidden space-y-4 p-4">
-          <a
-            href="#about"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-purple-500"
-          >
-            About
+      {/* Mobile Side Drawer Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#cbbaad] text-black transform transition-transform duration-500 ease-in-out z-20 p-8 md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end">
+          <button onClick={toggleMenu} className="text-2xl font-bold">✕</button>
+        </div>
+
+        {/* Menu Items */}
+        <div className="flex flex-col space-y-8 mt-12 text-4xl font-extrabold">
+          <a href="#home" onClick={toggleMenu} className="flex items-baseline">
+            HOME <span className="text-sm text-purple-700 ml-2">01</span>
           </a>
-          <a
-            href="#projects"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-blue-500"
-          >
-            Projects
+          <a href="#about" onClick={toggleMenu} className="flex items-baseline">
+            ABOUT <span className="text-sm text-purple-700 ml-2">02</span>
           </a>
-          <a
-            href="#skills"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-blue-500"
-          >
-            Skills
+          <a href="#skills" onClick={toggleMenu} className="flex items-baseline">
+            SKILLS <span className="text-sm text-purple-700 ml-2">04</span>
           </a>
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-blue-500"
-          >
-            Contact
+          <a href="#experience" onClick={toggleMenu} className="flex uppercase items-baseline">
+            Experience <span className="text-sm text-purple-700 ml-2">02</span>
+          </a>
+          <a href="#projects" onClick={toggleMenu} className="flex items-baseline">
+            PROJECTS <span className="text-sm text-purple-700 ml-2">03</span>
+          </a>
+          <a href="#contact" onClick={toggleMenu} className="flex items-baseline">
+            CONTACT <span className="text-sm text-purple-700 ml-2">04</span>
           </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

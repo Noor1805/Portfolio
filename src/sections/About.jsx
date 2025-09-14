@@ -3,9 +3,12 @@ import { FaLinkedin, FaGithub, FaTimes } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="relative min-h-screen bg-black text-black flex items-center justify-center p-4 overflow-hidden">
-     {/* Background full-page text */}
-      
+    <div
+      id="about"
+      className="relative min-h-screen bg-black text-black flex items-center justify-center p-4 overflow-hidden"
+    >
+      {/* Background full-page text */}
+
       <div className="absolute top-96 inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>
@@ -45,8 +48,9 @@ const AboutMe = () => {
               flex items-center"
           >
             <p className="text-sm sm:text-base md:text-lg lg:text-base font-medium">
-              PASSIONATE FRONTEND DEVELOPER SKILLED IN REACT, NEXT.JS & TAILWIND. 
-              EXPLORING MERN STACK AND CLOUD ENGINEERING TO BUILD IMPACTFUL WEB EXPERIENCES.
+              PASSIONATE FRONTEND DEVELOPER SKILLED IN REACT, NEXT.JS &
+              TAILWIND. EXPLORING MERN STACK AND CLOUD ENGINEERING TO BUILD
+              IMPACTFUL WEB EXPERIENCES.
             </p>
           </div>
         </div>
@@ -60,7 +64,8 @@ const AboutMe = () => {
               lg:w-full  flex items-center text-left"
           >
             <p className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">
-              B.TECH IN <br /> COMPUTER SCIENCE <br /> & ENGINEERING <br /> (2ND YEAR)
+              B.TECH IN <br /> COMPUTER SCIENCE <br /> & ENGINEERING <br /> (2ND
+              YEAR)
             </p>
           </div>
 
@@ -76,7 +81,9 @@ const AboutMe = () => {
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">
               CONTACT ME
             </h2>
-            <span className="absolute top-3 right-3 text-2xl">↗</span>
+            <a href="#contact" className="absolute top-3 right-3 text-2xl">
+              ↗
+            </a>
           </div>
         </div>
 
@@ -108,16 +115,40 @@ const AboutMe = () => {
           </div>
 
           {/* Socials */}
-          <div
-            className="bg-[#cbbaad] rounded-2xl shadow p-6
-              h-[70px] sm:h-[75px] md:h-[80px] lg:h-[40px]  
-              lg:w-full  lg:ml-0
-              flex items-center justify-between"
-          >
-            <FaTimes className="text-2xl cursor-pointer hover:text-gray-600" />
-            <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-            <FaGithub className="text-2xl cursor-pointer hover:text-gray-800" />
-          </div>
+<div
+  className="bg-[#cbbaad] rounded-2xl shadow p-6
+    h-[70px] sm:h-[75px] md:h-[80px] lg:h-[40px]  
+    lg:w-full lg:ml-0
+    flex items-center justify-between"
+>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/kashaf-noor-29380332a"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/Noor1805"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaGithub className="text-2xl cursor-pointer hover:text-gray-800" />
+  </a>
+
+  {/* Twitter (X) */}
+  <a
+    href="https://x.com/noor36758"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className="text-2xl cursor-pointer hover:text-slate-800">𝕏</span>
+  </a>
+</div>
+
         </div>
       </div>
     </div>
@@ -125,4 +156,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-

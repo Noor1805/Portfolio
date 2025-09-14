@@ -29,7 +29,7 @@ export default function ProjectInfiniteMenu() {
   const [items] = useState(defaultItems);
 
   return (
-    <div className="flex mt-5 flex-col items-center justify-center min-h-screen bg-black text-[#cbbaad] p-4">
+    <div id="projects" className="flex mt-5 flex-col items-center justify-center min-h-screen bg-black text-[#cbbaad] p-4">
   
       <h1 className="text-[clamp(7rem,8vw,10rem)] font-bold Zumma ">Project</h1>
       <div className="-mt-2 w-full h-[70vh] sm:h-[80vh] md:h-[90vh] rounded-2xl overflow-hidden border border-[#cbbaad]">
