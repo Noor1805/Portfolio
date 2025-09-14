@@ -1,4 +1,51 @@
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
+  const headingRef = useRef(null);
+  const paraRef = useRef(null);
+
+  // ✨ Letter Reveal Animation
+  useEffect(() => {
+    const letters = headingRef.current.querySelectorAll(".letter");
+
+    gsap.fromTo(
+      letters,
+      {
+        clipPath: "inset(0 100% 0 0)",
+        opacity: 0,
+        x: 80,
+        rotateX: 45,
+      },
+      {
+        clipPath: "inset(0 0% 0 0)",
+        opacity: 1,
+        x: 0,
+        rotateX: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.from(paraRef.current, {
+      opacity: 0,
+      x: 40,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: paraRef.current,
+        start: "top 85%",
+      },
+    });
+  }, []);
   return (
     <section
       id="home"
@@ -24,8 +71,29 @@ const Home = () => {
           <div className="-mb-2 sm:-mb-4 lg:-mb-7 2xl:-mb-12  michroma-font text-[clamp(0.625rem,2vw,0.975rem)] uppercase tracking-widest text-[#cbbaad]">
             CODE ✦ DESIGN
           </div>
-          <h1 className="whitespace-nowrap text-[clamp(4.7rem,21vw,17rem)] lg:text-[clamp(6rem,20vw,22rem)] Zumma text-[#cbbaad] leading-tight font-bold -mb-6 sm:-mb-6 md:-mb-8 lg:-mb-14 xl:-mb-20 ">
-            KASHAF NOOR
+          <h1
+            ref={headingRef}
+            className="whitespace-nowrap text-[clamp(4.7rem,21vw,17rem)] 
+             lg:text-[clamp(6rem,20vw,22rem)] Zumma text-[#cbbaad] 
+             leading-tight font-bold -mb-6 sm:-mb-6 md:-mb-8 
+             lg:-mb-14 xl:-mb-20 flex"
+          >
+            {/* KASHAF */}
+            {"KASHAF".split("").map((ch, i) => (
+              <span key={i} className="letter inline-block">
+                {ch}
+              </span>
+            ))}
+
+            {/* Custom big space */}
+            <span className="inline-block mx-[0.5rem]"></span>
+
+            {/* NOOR */}
+            {"NOOR".split("").map((ch, i) => (
+              <span key={i + 100} className="letter inline-block">
+                {ch}
+              </span>
+            ))}
           </h1>
 
           <p className="relative md:absolute right-0 md:-right-14 lg:-right-44 xl:right-[-28rem] 2xl:right-[-44rem] top-full mt-4 text-[clamp(1rem,2vw,2rem)] lg:text-[clamp(1.5rem,1.4vw,2rem)] w-[220px] sm:w-64 md:w-60 lg:w-72 xl:w-96 michroma-font text-[#dbd3ce]">

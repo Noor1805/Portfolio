@@ -189,7 +189,6 @@ const Skills = () => {
           ))}
         </h2>
         <p
-          ref={paraRef}
           className="text-base sm:text-lg md:text-xl lg:text-2xl uppercase opacity-80"
         >
           Summary of my technical and professional skill

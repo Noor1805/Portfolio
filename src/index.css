@@ -49,7 +49,7 @@ html,body {
 
 /* 👇 Tailwind class jaisa hi ek utility bana diya */
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .michroma-font {
