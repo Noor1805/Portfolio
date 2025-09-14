@@ -38,6 +38,19 @@ html,body {
   font-family: 'Zumma Rough Bold', sans-serif;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 👇 Tailwind class jaisa hi ek utility bana diya */
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
 
 .michroma-font {
   font-family: 'Michroma', sans-serif;

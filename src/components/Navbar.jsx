@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed orbitron-font Zumma tracking-wider font-bold top-0 left-0 w-full bg-black text-white p-4 flex items-center justify-between z-50">
+    <nav className="fixed orbitron-font Zumma tracking-wider font-bold top-0 left-0 w-full bg-black text-[#cbbaad] p-4 flex items-center justify-between z-50">
       {/* Left - Logo */}
       <div className="flex items-center">
         <h1 className="text-2xl Zumma font-bold">KASHAF</h1>
