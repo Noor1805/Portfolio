@@ -1,7 +1,41 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
   const [result, setResult] = useState("");
+
+  const headingRef = useRef(null);
+  const containerRef = useRef(null);
+
+  // ✨ Letter Reveal Animation
+  useEffect(() => {
+    const letters = headingRef.current.querySelectorAll(".letter");
+
+    gsap.fromTo(
+      letters,
+      {
+        clipPath: "inset(0 100% 0 0)",
+        opacity: 0,
+        x: 80,
+        rotateX: 45,
+      },
+      {
+        clipPath: "inset(0 0% 0 0)",
+        opacity: 1,
+        x: 0,
+        rotateX: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -32,8 +66,10 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="relative min-h-screen bg-black text-[#cbbaad] flex flex-col items-center justify-center px-6 overflow-hidden">
-      
+    <div
+      id="contact"
+      className="relative min-h-screen bg-black text-[#cbbaad] flex flex-col items-center justify-center px-6 overflow-hidden"
+    >
       <div className="absolute inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>
@@ -42,14 +78,26 @@ export default function Contact() {
       <div className="relative z-10 w-full max-w-5xl grid md:grid-cols-2 gap-32">
         {/* Left Section */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-8xl Zumma md:text-9xl font-extrabold leading-tight">
-            Contact me
+          <h1
+            ref={headingRef}
+            className="text-8xl Zumma md:text-9xl font-extrabold leading-tight"
+          >
+            {"CONTACT".split("").map((ch, i) => (
+              <span key={i} className="letter inline-block">
+                {ch}
+              </span>
+            ))}
+            <span className="inline-block mx-[0.5rem]"></span>
+            {"ME".split("").map((ch, i) => (
+              <span key={i + 100} className="letter inline-block">
+                {ch}
+              </span>
+            ))}
           </h1>
           <div className=" space-y-3 text-lg">
-            <p>yourgmailid@gmail.com</p>
-            <p>(+91) 98765-43210</p>
-            <p>123 Demo Street</p>
-            <p>New Delhi, India</p>
+            <p>kashafnoor346@gmail.com</p>
+            <p>Jamshedpur, Jharkhand, India</p>
+            <p>Available for Remote Opportunities</p>
           </div>
         </div>
 
@@ -102,4 +150,3 @@ export default function Contact() {
     </div>
   );
 }
-

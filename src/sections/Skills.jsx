@@ -34,20 +34,8 @@ const Skills = () => {
           start: "top 80%",
         },
       }
-    );
-
-     gsap.from(paraRef.current, {
-      opacity: 0,
-      x: 40,
-      duration: 1,
-      ease: "power2.out",
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: paraRef.current,
-        start: "top 85%",
-      },
-    });
-  }, []);
+    );}, []);
+  
   // ---------------- Left/Right Hover Marquee Logic ----------------
   const findClosestEdge = (mouseX, mouseY, width, height) => {
     const leftDist = mouseX ** 2 + (mouseY - height / 2) ** 2;

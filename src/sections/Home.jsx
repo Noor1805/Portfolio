@@ -33,19 +33,10 @@ const Home = () => {
         },
       }
     );
-
-    gsap.from(paraRef.current, {
-      opacity: 0,
-      x: 40,
-      duration: 1,
-      ease: "power2.out",
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: paraRef.current,
-        start: "top 85%",
-      },
-    });
+    
   }, []);
+
+    
   return (
     <section
       id="home"
@@ -67,9 +58,9 @@ const Home = () => {
         </div>
 
         {/* Right - Text Content */}
-        <div className="relative max-w-2xl mt-10 xl:mt-10 lg:mt-20 lg:ml-1 xl:ml-10">
+        <div className="relative max-w-2xl mt-10 xl:mt-5 lg:mt-3 lg:ml-1 xl:ml-10">
           <div className="-mb-2 sm:-mb-4 lg:-mb-7 2xl:-mb-12  michroma-font text-[clamp(0.625rem,2vw,0.975rem)] uppercase tracking-widest text-[#cbbaad]">
-            CODE ✦ DESIGN
+            CODE ✦ DESIGN ✦ INNOVATION
           </div>
           <h1
             ref={headingRef}
@@ -86,7 +77,7 @@ const Home = () => {
             ))}
 
             {/* Custom big space */}
-            <span className="inline-block mx-[0.5rem]"></span>
+            <span className="inline-block mx-[2rem]"></span>
 
             {/* NOOR */}
             {"NOOR".split("").map((ch, i) => (
