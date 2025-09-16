@@ -77,7 +77,7 @@ const Home = () => {
             ))}
 
             {/* Custom big space */}
-            <span className="inline-block mx-[2rem]"></span>
+            <span className="inline-block mx-[0.5rem] sm:mx-[1rem] lg:mx-[1.5rem]"></span>
 
             {/* NOOR */}
             {"NOOR".split("").map((ch, i) => (
