@@ -25,6 +25,11 @@ const defaultItems = [
     link: "https://noor1805.github.io/ai-enhancer//",
     title: "AI-Image Enhancer",
   },
+  {
+    image: "/assets/ebook.png",
+    link: "http://ebook-ai-omega.vercel.app/",
+    title: "AI powered eBook",
+  },
 ];
 
 export default function ProjectInfiniteMenu() {

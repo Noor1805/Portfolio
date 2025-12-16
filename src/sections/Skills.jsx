@@ -149,9 +149,9 @@ const Skills = () => {
 
   const rightSkills = [
     { num: "05", skill: "GSAP" },
-    { num: "06", skill: "Communication" },
-    { num: "07", skill: "Time Management" },
-    { num: "08", skill: "Adaptability" },
+    { num: "06", skill: "Node JS" },
+    { num: "07", skill: "Mongo DB" },
+    { num: "08", skill: "Express JS" },
   ];
 
   return (
