@@ -11,19 +11,14 @@ const defaultItems = [
     title: "Capsule",
   },
   {
-    image: "/assets/thirtysix.png",
-    link: "https://noor1805.github.io/Thirtysixstudio/",
-    title: "Thirtysix studio",
+    image: "/assets/monexa.png",
+    link: "https://monexa-app.vercel.app/",
+    title: "Monexa",
   },
   {
     image: "/assets/rockstar.png",
     link: "https://noor1805.github.io/GTA-5/",
     title: "GTA-6",
-  },
-  {
-    image: "/assets/ai.jpg",
-    link: "https://noor1805.github.io/ai-enhancer//",
-    title: "AI-Image Enhancer",
   },
   {
     image: "/assets/ebook.png",
