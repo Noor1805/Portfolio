@@ -16,11 +16,6 @@ const defaultItems = [
     title: "Monexa",
   },
   {
-    image: "/assets/rockstar.png",
-    link: "https://noor1805.github.io/GTA-5/",
-    title: "GTA-6",
-  },
-  {
     image: "/assets/ebook.png",
     link: "http://ebook-ai-omega.vercel.app/",
     title: "AI powered eBook",
