@@ -9,7 +9,7 @@ const AboutMe = () => {
   const headingRef = useRef(null);
   const containerRef = useRef(null);
 
-  // ✨ Letter Reveal Animation
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -37,7 +37,7 @@ const AboutMe = () => {
     );
   }, []);
 
-  // ✨ Sequential Box Animation
+  
   useEffect(() => {
     const boxes = containerRef.current.querySelectorAll(".box");
 
@@ -54,7 +54,7 @@ const AboutMe = () => {
         scale: 1,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.3, // ek ek karke aayega
+        stagger: 0.3, 
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 80%",
@@ -68,17 +68,17 @@ const AboutMe = () => {
       id="about"
       className="relative min-h-screen bg-black text-black flex items-center justify-center p-4 overflow-hidden"
     >
-      {/* Background full-page text */}
+      
       <div className="absolute top-96 inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>
 
-      {/* Main Grid */}
+      
       <div
         ref={containerRef}
         className="relative z-10 max-w-6xl w-full grid gap-4 md:gap-4 grid-cols-1 lg:grid-cols-4"
       >
-        {/* Header */}
+        
         <div className="lg:col-span-4 bg-[#cbbaad] rounded-2xl shadow p-6 flex items-center justify-center 
                         h-[100px] sm:h-[110px] md:h-[130px] lg:h-[150px]">
           <h1
@@ -99,9 +99,9 @@ const AboutMe = () => {
           </h1>
         </div>
 
-        {/* Left Column */}
+        
         <div className="lg:col-span-1 flex flex-col gap-4">
-          {/* Creative Direction */}
+          
           <div className="box bg-[#cbbaad] rounded-2xl shadow p-6 
               h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] 
               flex flex-col justify-center">
@@ -113,7 +113,7 @@ const AboutMe = () => {
             </span>
           </div>
 
-          {/* Passionate */}
+          
           <div className="box bg-[#cbbaad] rounded-2xl shadow p-6 
               h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] lg:w-full 
               flex items-center">
@@ -125,9 +125,9 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Middle Column */}
+        
         <div className="lg:col-span-1 flex flex-col gap-4">
-          {/* B.Tech */}
+          
           <div className="box bg-[#cbbaad] rounded-2xl shadow p-6
               h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] 
               lg:w-full  flex items-center text-left">
@@ -137,7 +137,7 @@ const AboutMe = () => {
             </p>
           </div>
 
-          {/* Contact */}
+          
           <div className="box relative bg-[#cbbaad] rounded-2xl shadow p-6
               h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] 
               lg:w-full flex flex-col justify-end">
@@ -153,9 +153,9 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        
         <div className="lg:col-span-2 flex flex-col gap-4">
-          {/* Experience */}
+          
           <div className="box bg-[#cbbaad] rounded-2xl shadow p-8 sm:p-10 flex flex-col 
               h-[320px] sm:h-[360px] md:h-[400px] lg:h-[390px]  
               lg:max-w-full  lg:ml-0 ">
@@ -178,7 +178,7 @@ const AboutMe = () => {
             </ul>
           </div>
 
-          {/* Socials */}
+          
           <div className="box bg-[#cbbaad] rounded-2xl shadow p-6
               h-[70px] sm:h-[75px] md:h-[80px] lg:h-[40px]  
               lg:w-full lg:ml-0

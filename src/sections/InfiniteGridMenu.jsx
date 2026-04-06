@@ -128,7 +128,7 @@ class Geometry {
   }
 
   subdivide(divisions = 1) {
-    const midPointCache = {};
+    const midPointCache = ;
     let f = this.faces;
 
     for (let div = 0; div < divisions; ++div) {
@@ -651,8 +651,8 @@ class InfiniteGridMenu {
   ) {
     this.canvas = canvas;
     this.items = items || [];
-    this.onActiveItemChange = onActiveItemChange || (() => {});
-    this.onMovementChange = onMovementChange || (() => {});
+    this.onActiveItemChange = onActiveItemChange || (() => );
+    this.onMovementChange = onMovementChange || (() => );
     this.#init(onInit);
   }
 

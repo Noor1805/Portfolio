@@ -7,7 +7,7 @@ const Home = () => {
   const headingRef = useRef(null);
   const paraRef = useRef(null);
 
-  // ✨ Letter Reveal Animation
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -42,14 +42,14 @@ const Home = () => {
       id="home"
       className="relative mt-10 w-full bg-black mb-7 overflow-hidden min-h-[70vh] md:min-h-screen pt-0 xl:pt-12 flex items-center justify-center"
     >
-      {/* Background full-page text */}
+      
       <div className="absolute inset-0 px-6 text-[#363333] opacity-5 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(25)}
       </div>
 
-      {/* Main Content Area */}
+      
       <div className="relative container mx-auto px-3 flex flex-row items-start space-x-8 ">
-        {/* Left - Vertical Boxes */}
+        
         <div className="flex flex-col space-y-12 ">
           <div className="w-5 h-8 lg:w-10 lg:h-16 border-2 border-[#fef3ec] rounded-md"></div>
           <div className="w-5 h-8 border-2 lg:w-10 lg:h-16  border-[#fef3ec]  rounded-md"></div>
@@ -57,7 +57,7 @@ const Home = () => {
           <div className="w-5 h-8 border-2 lg:w-10 lg:h-16  border-[#fef3ec]  rounded-md"></div>
         </div>
 
-        {/* Right - Text Content */}
+        
         <div className="relative max-w-2xl mt-10 xl:mt-5 lg:mt-3 lg:ml-1 xl:ml-10">
           <div className="-mb-2 sm:-mb-4 lg:-mb-7 2xl:-mb-12  michroma-font text-[clamp(0.625rem,2vw,0.975rem)] uppercase tracking-widest text-[#cbbaad]">
             CODE ✦ DESIGN ✦ INNOVATION
@@ -69,17 +69,17 @@ const Home = () => {
              leading-tight font-bold -mb-6 sm:-mb-6 md:-mb-8 
              lg:-mb-14 xl:-mb-20 flex"
           >
-            {/* KASHAF */}
+            
             {"KASHAF".split("").map((ch, i) => (
               <span key={i} className="letter inline-block">
                 {ch}
               </span>
             ))}
 
-            {/* Custom big space */}
+            
             <span className="inline-block mx-[0.5rem] sm:mx-[1rem] lg:mx-[1.5rem]"></span>
 
-            {/* NOOR */}
+            
             {"NOOR".split("").map((ch, i) => (
               <span key={i + 100} className="letter inline-block">
                 {ch}

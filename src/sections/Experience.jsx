@@ -8,7 +8,7 @@ const Experience = () => {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
 
-  // ✨ Letter Reveal Animation (Heading)
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -36,7 +36,7 @@ const Experience = () => {
     );
   }, []);
 
-  // ✨ Cards Animation (Right Side → ek ek karke)
+  
   useEffect(() => {
     gsap.fromTo(
       cardsRef.current,
@@ -60,12 +60,12 @@ const Experience = () => {
       id="experience"
       className="relative w-full mt-5 bg-black text-[#cbbaad] flex flex-col lg:flex-row min-h-screen overflow-hidden"
     >
-      {/* Background full-page text */}
+      
       <div className="absolute inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>
 
-      {/* Left Section */}
+      
       <div className="lg:w-1/2 flex flex-col mt-10 justify-start items-start px-8 lg:px-20 py-12 lg:py-20">
         <h2
           ref={headingRef}
@@ -83,9 +83,9 @@ const Experience = () => {
         </p>
       </div>
 
-      {/* Right Section */}
+      
       <div className="lg:w-1/2 flex flex-col justify-center px-8 lg:px-20 py-12 lg:py-20 divide-y divide-gray-600">
-        {/* Card 1 */}
+        
         <div
           className="py-10"
           ref={(el) => (cardsRef.current[0] = el)}
@@ -102,7 +102,7 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Card 2 */}
+        
         <div
           className="py-10"
           ref={(el) => (cardsRef.current[1] = el)}
@@ -119,7 +119,7 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Card 3 */}
+        
         <div
           className="py-10"
           ref={(el) => (cardsRef.current[2] = el)}
@@ -136,7 +136,7 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Card 4 */}
+        
         <div
           className="py-10"
           ref={(el) => (cardsRef.current[3] = el)}

@@ -9,7 +9,7 @@ export default function Contact() {
   const headingRef = useRef(null);
   const containerRef = useRef(null);
 
-  // ✨ Letter Reveal Animation
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -43,7 +43,7 @@ export default function Contact() {
 
     const formData = new FormData(event.target);
 
-    // 🔑 Yahan apna Web3Forms ka ACCESS KEY paste karo
+    
     formData.append("access_key", "70defd52-55ec-412a-a745-815c4de39645");
 
     try {
@@ -74,9 +74,9 @@ export default function Contact() {
         {"KASHAF NOOR ".repeat(5)}
       </div>
 
-      {/* Content Layer (above bg text) */}
+      
       <div className="relative z-10 w-full max-w-5xl grid md:grid-cols-2 gap-32">
-        {/* Left Section */}
+        
         <div className="flex flex-col justify-center">
           <h1
             ref={headingRef}
@@ -101,7 +101,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Section */}
+        
         <div className="flex flex-col justify-center">
           <form onSubmit={onSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -143,7 +143,7 @@ export default function Contact() {
             </button>
           </form>
 
-          {/* Result Message */}
+          
           <span className="mt-4 block text-sm">{result}</span>
         </div>
       </div>

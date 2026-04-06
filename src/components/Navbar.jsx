@@ -9,12 +9,12 @@ const Navbar = () => {
 
   return (
     <nav className="fixed orbitron-font Zumma tracking-wider font-bold top-0 left-0 w-full bg-black text-[#cbbaad] p-4 flex items-center justify-between z-50">
-      {/* Left - Logo */}
+      
       <div className="flex items-center">
         <h1 className="text-2xl Zumma font-bold">KASHAF</h1>
       </div>
 
-      {/* Desktop Links */}
+      
       <div className="hidden text-xl md:flex space-x-20">
         <a href="#about" className="hover:bg-[#cbbaad] hover:text-black px-4 py-2 rounded-2xl">
           About
@@ -31,9 +31,9 @@ const Navbar = () => {
        
       </div>
 
-      {/* Right - Contact or Burger */}
+      
       <div className="flex items-center md:mr-10">
-        {/* Contact - Desktop */}
+        
         <div className="hidden md:block">
           <a
             href="#contact"
@@ -43,7 +43,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Burger Menu - Mobile */}
+        
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isOpen ? (
@@ -79,18 +79,18 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Side Drawer Menu */}
+      
       <div
         className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#cbbaad] text-black transform transition-transform duration-500 ease-in-out z-20 p-8 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close Button */}
+        
         <div className="flex justify-end">
           <button onClick={toggleMenu} className="text-2xl font-bold">✕</button>
         </div>
 
-        {/* Menu Items */}
+        
         <div className="flex flex-col space-y-8 mt-12 text-4xl font-extrabold">
           <a href="#home" onClick={toggleMenu} className="flex items-baseline">
             HOME <span className="text-sm text-purple-700 ml-2">01</span>

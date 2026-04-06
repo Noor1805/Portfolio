@@ -28,7 +28,7 @@ export default function ProjectInfiniteMenu() {
   const headingRef = useRef(null);
   const paraRef = useRef(null);
 
-  // ✨ Letter Reveal Animation
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 

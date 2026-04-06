@@ -1,8 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap');
 
-/*
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />*/
+
 
 @font-face {
   font-family: 'Zumma Rough Bold';
@@ -10,7 +9,7 @@
   font-weight: bold;
   font-style: normal;
 }
-/* League Gothic Font */
+
 @font-face {
   font-family: 'League Gothic';
   src: url('/assets/LeagueGothic-Regular.otf') format('opentype');
@@ -22,7 +21,7 @@
 }
 
 
-/* Michroma Font */
+
 @font-face {
   font-family: 'Michroma';
   src: url('/assets/Michroma-Regular.ttf') format('truetype');
@@ -47,7 +46,7 @@ html,body {
   }
 }
 
-/* 👇 Tailwind class jaisa hi ek utility bana diya */
+
 .animate-marquee {
   animation: marquee 10s linear infinite;
 }

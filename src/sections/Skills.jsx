@@ -9,7 +9,7 @@ const Skills = () => {
   const headingRef = useRef(null);
   const paraRef = useRef(null);
 
-  // ✨ Letter Reveal Animation
+  
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -36,7 +36,7 @@ const Skills = () => {
       }
     );}, []);
   
-  // ---------------- Left/Right Hover Marquee Logic ----------------
+  
   const findClosestEdge = (mouseX, mouseY, width, height) => {
     const leftDist = mouseX ** 2 + (mouseY - height / 2) ** 2;
     const rightDist = (mouseX - width) ** 2 + (mouseY - height / 2) ** 2;
@@ -84,7 +84,7 @@ const Skills = () => {
       .to(marqueeInnerRef.current, { x: edge === "left" ? "101%" : "-101%" });
   };
 
-  // ---------------- Skill Item ----------------
+  
   const SkillItem = ({ num, skill }) => {
     const itemRef = useRef(null);
     const marqueeRef = useRef(null);
@@ -123,7 +123,7 @@ const Skills = () => {
           </span>
         </div>
 
-        {/* Hover marquee effect */}
+        
         <div
           ref={marqueeRef}
           className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-[#cbbaad] translate-x-[101%]"
@@ -139,7 +139,7 @@ const Skills = () => {
     );
   };
 
-  // ---------------- Skill Lists ----------------
+  
   const leftSkills = [
     { num: "01", skill: "React" },
     { num: "02", skill: "Next JS" },
@@ -159,12 +159,12 @@ const Skills = () => {
       id="skills"
       className="relative w-full bg-black text-[#cbbaad] flex flex-col items-center py-16 px-6 sm:px-10 lg:px-20"
     >
-      {/* Background full-page text */}
+      
       <div className="absolute inset-0 px-6 text-[#363333] opacity-10 font-extrabold text-[12rem] leading-[1.2] whitespace-pre-wrap flex flex-wrap justify-center items-center select-none">
         {"KASHAF NOOR ".repeat(5)}
       </div>
 
-      {/* Heading with letter split */}
+      
       <div className="text-center mb-14 overflow-hidden">
         <h2
           ref={headingRef}
@@ -183,7 +183,7 @@ const Skills = () => {
         </p>
       </div>
 
-      {/* Grid */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10 max-w-6xl w-full">
         <div className="flex flex-col gap-8">
           {leftSkills.map((item) => (
